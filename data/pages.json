@@ -1,0 +1,72 @@
+{
+  "home": {
+    "title": "Home Page",
+    "description": "Welcome to the home page",
+    "blocks": [
+      {
+        "type": "hero",
+        "data": {
+          "title": "Welcome to Our Website",
+          "subtitle": "We provide the best services for you",
+          "backgroundImage": "/images/hero-bg.jpg"
+        }
+      },
+      {
+        "type": "featured-projects",
+        "data": {
+          "title": "Our Featured Projects",
+          "description": "Take a look at some of our recent work",
+          "projects": [
+            {
+              "title": "Project One",
+              "description": "Description of project one.",
+              "image": "/images/project1.jpg",
+              "link": "/projects/project-one"
+            },
+            {
+              "title": "Project Two",
+              "description": "Description of project two.",
+              "image": "/images/project2.jpg",
+              "link": "/projects/project-two"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "about": {
+    "title": "Home Page",
+    "description": "Welcome to the home page",
+    "blocks": [
+      {
+        "type": "hero",
+        "data": {
+          "title": "Welcome to Our Website",
+          "subtitle": "We provide the best services for you",
+          "backgroundImage": "/images/hero-bg.jpg"
+        }
+      },
+      {
+        "type": "featured-projects",
+        "data": {
+          "title": "Our Featured Projects",
+          "description": "Take a look at some of our recent work",
+          "projects": [
+            {
+              "title": "Project One",
+              "description": "Description of project one.",
+              "image": "/images/project1.jpg",
+              "link": "/projects/project-one"
+            },
+            {
+              "title": "Project Two",
+              "description": "Description of project two.",
+              "image": "/images/project2.jpg",
+              "link": "/projects/project-two"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

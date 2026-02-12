@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 
 type HeroSlide = {
@@ -14,11 +14,13 @@ type HeroSlide = {
 
 type HeroProps = {
   slides: HeroSlide[];
+  autoScrollInterval?: number;
 };
 
-export const Hero: React.FC<HeroProps> = ({ slides }) => {
+export const Hero: React.FC<HeroProps> = ({ slides, autoScrollInterval = 5000 }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const [isPaused, setIsPaused] = useState(false);
   const touchStartX = useRef<number>(0);
   const touchEndX = useRef<number>(0);
 
@@ -42,6 +44,19 @@ export const Hero: React.FC<HeroProps> = ({ slides }) => {
     setCurrentSlide(index);
     setTimeout(() => setIsTransitioning(false), 500);
   };
+
+  // Auto-scroll functionality
+  useEffect(() => {
+    if (isPaused || slides.length <= 1 || isTransitioning) return;
+
+    const interval = setInterval(() => {
+      setIsTransitioning(true);
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+      setTimeout(() => setIsTransitioning(false), 500);
+    }, autoScrollInterval);
+
+    return () => clearInterval(interval);
+  }, [isPaused, slides.length, autoScrollInterval, isTransitioning]);
 
   const handleTouchStart = (e: React.TouchEvent) => {
     touchStartX.current = e.touches[0].clientX;
@@ -72,11 +87,12 @@ export const Hero: React.FC<HeroProps> = ({ slides }) => {
   };
 
   const currentSlideData = slides[currentSlide];
-  const heightClass = currentSlideData?.fullHeight !== false ? "min-h-screen" : "min-h-[auto]";
 
   return (
     <section
-      className={`${heightClass} hero-video-container relative flex items-center justify-center bg-gray-900 overflow-hidden`}
+      className={`hero-video-container min-h-screen relative flex items-center justify-center bg-gray-900 overflow-hidden transition-all duration-700`}
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}

@@ -1,4 +1,4 @@
-import { Hero, SideBySide, FeaturedProjects } from "@/components";
+import { Hero, SideBySide, FeaturedProjects, ImageCarousel, ImageColumns } from "@/components";
 
 export default function Home() {
   const heroSlides = [
@@ -16,7 +16,7 @@ export default function Home() {
       image: "/images/home-slider/2.jpg",
       imageAlt: "Stone craftsmanship",
       preheading: "Bespoke Solutions",
-      fullHeight: true,
+      fullHeight: false,
     },
     {
       title: "Elevate Your Space",
@@ -27,11 +27,24 @@ export default function Home() {
     },
   ];
 
+  const logos = [
+    { src: "/images/logos/amg.png", alt: "Logo 1" },
+    { src: "/images/logos/audi.svg", alt: "Logo 2" },
+    { src: "/images/logos/facebook.png", alt: "Logo 3" },
+    { src: "/images/logos/google.png", alt: "Logo 4" },
+    { src: "/images/logos/honda.png", alt: "Logo 5" },
+    { src: "/images/logos/roblox.png", alt: "Logo 6" },
+    { src: "/images/logos/youtube.png", alt: "youtube 6" },
+    { src: "/images/logos/intuit.svg", alt: "Intuit 6" },
+  ];
+
   return (
     <main className="bg-white dark:bg-black">
       <Hero slides={heroSlides} />
       <SideBySide title="Timeless Artistry in Stone" description="Exquisite Materials. Masterful Execution." />
       <FeaturedProjects title="Timeless Artistry in Stone" description="Exquisite Materials. Masterful Execution." />
+      <ImageColumns title="Header" />
+      <ImageCarousel images={logos} />
     </main>
   );
 }

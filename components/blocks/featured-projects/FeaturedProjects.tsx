@@ -3,14 +3,21 @@ import React from "react";
 type FeaturedProjectsProps = {
   title: string;
   description: string;
+  projects?: {
+    image: string;
+    alt: string;
+    category: string;
+    name: string;
+    description: string;
+  }[];
 };
 
-export const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({ title, description }) => {
+export const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({ title, description, projects }) => {
   return (
     <section className="bg-gray-200 py-32 px-8 md:px-24 bg-background-light dark:bg-background-dark">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-20">
-          <div className="col-span-4">
+        <div className="flex gap-20">
+          <div className="w-full md:w-2/5">
             <div className="md:sticky md:top-32 space-y-8">
               <div className="space-y-4">
                 <span className="pre-heading">PORTFOLIO OF EXCELLENCE</span>
@@ -28,9 +35,9 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({ title, descr
               </a>
             </div>
           </div>
-          <div className="col-span-8">
+          <div className="w-full m:w-3/5">
             <div className="space-y-6 group">
-              <div className="overflow-hidden aspect-video">
+              <div className="overflow-hidden">
                 <img
                   alt="Melbourne Square Project"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
@@ -46,7 +53,7 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({ title, descr
               </div>
             </div>
             <div className="space-y-6 group">
-              <div className="overflow-hidden aspect-video">
+              <div className="overflow-hidden">
                 <img
                   alt="Melbourne Square Project"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
@@ -62,7 +69,7 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({ title, descr
               </div>
             </div>
             <div className="space-y-6 group">
-              <div className="overflow-hidden aspect-video">
+              <div className="overflow-hidden">
                 <img
                   alt="Melbourne Square Project"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
