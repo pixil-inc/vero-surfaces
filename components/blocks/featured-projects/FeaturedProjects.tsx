@@ -24,8 +24,9 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({ title, descr
                 <h2 className="heading">Crafting legacies through natural stone.</h2>
               </div>
               <p className="text-gray-600 dark:text-gray-400 leading-relaxed max-w-md">
-                With over 25 years of expertise in the stone industry, we've set a new standard for excellence. From sourcing rare marbles in Carrara to
-                precision installation in modern landmarks, our commitment to quality is unwavering.
+                With over 25 years of expertise in the stone industry, we've set a new standard for excellence. From
+                sourcing rare marbles in Carrara to precision installation in modern landmarks, our commitment to
+                quality is unwavering.
               </p>
               <a
                 className="border border-primary dark:border-white px-8 py-3 text-[10px] uppercase tracking-widest hover:bg-primary hover:text-white dark:hover:bg-white dark:hover:text-black transition-all"
@@ -48,7 +49,8 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({ title, descr
                 <span className="text-[10px] uppercase tracking-widest text-gray-500">Commercial · Residential</span>
                 <h3 className="text-2xl font-display font-medium">The Azure Towers</h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
-                  A $1.2 billion precinct featuring custom-quarried Italian Travertine throughout the lobbies and penthouse suites.
+                  A $1.2 billion precinct featuring custom-quarried Italian Travertine throughout the lobbies and
+                  penthouse suites.
                 </p>
               </div>
             </div>
@@ -64,7 +66,8 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({ title, descr
                 <span className="text-[10px] uppercase tracking-widest text-gray-500">Commercial · Residential</span>
                 <h3 className="text-2xl font-display font-medium">The Azure Towers</h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
-                  A $1.2 billion precinct featuring custom-quarried Italian Travertine throughout the lobbies and penthouse suites.
+                  A $1.2 billion precinct featuring custom-quarried Italian Travertine throughout the lobbies and
+                  penthouse suites.
                 </p>
               </div>
             </div>
@@ -80,7 +83,8 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({ title, descr
                 <span className="text-[10px] uppercase tracking-widest text-gray-500">Commercial · Residential</span>
                 <h3 className="text-2xl font-display font-medium">The Azure Towers</h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
-                  A $1.2 billion precinct featuring custom-quarried Italian Travertine throughout the lobbies and penthouse suites.
+                  A $1.2 billion precinct featuring custom-quarried Italian Travertine throughout the lobbies and
+                  penthouse suites.
                 </p>
               </div>
             </div>

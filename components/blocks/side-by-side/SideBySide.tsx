@@ -13,8 +13,9 @@ export const SideBySide: React.FC<SideBySideProps> = ({ title, description }) =>
           <span className="pre-heading">WHO WE are</span>
           <h2 className="heading">Crafting legacies through natural stone.</h2>
           <p className="text-gray-600 dark:text-gray-400 leading-relaxed max-w-md">
-            With over 25 years of expertise in the stone industry, we've set a new standard for excellence. From sourcing rare marbles in Carrara to precision
-            installation in modern landmarks, our commitment to quality is unwavering.
+            With over 25 years of expertise in the stone industry, we've set a new standard for excellence. From
+            sourcing rare marbles in Carrara to precision installation in modern landmarks, our commitment to quality is
+            unwavering.
           </p>
           <div className="pt-4">
             <a className="inline-flex items-center space-x-4 group" href="#">

@@ -13,7 +13,14 @@ export const Header: React.FC<HeaderProps> = ({ links }) => {
         <div className="flex justify-between items-center text-white">
           <div className="text-2xl font-display font-semibold tracking-widest uppercase">
             <Link href="/">
-              <Image priority alt="Vero Surfaces Logo" src="/images/logo.svg" width={102} height={62} className="inline-block mr-2" />
+              <Image
+                priority
+                alt="Vero Surfaces Logo"
+                src="/images/logo.svg"
+                width={102}
+                height={62}
+                className="inline-block mr-2"
+              />
             </Link>
           </div>
           <nav className="hidden md:flex space-x-12 text-xs uppercase tracking-widest font-medium">

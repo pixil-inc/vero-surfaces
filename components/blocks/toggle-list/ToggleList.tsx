@@ -26,10 +26,14 @@ export const ToggleList: React.FC<ToggleListBlockData> = ({ content, link, items
                     key={item.id}
                     onClick={() => setSelectedItem(item.id)}
                     className={`category-label flex items-center group cursor-pointer text-xl md:text-2xl font-display uppercase tracking-widest transition-colors duration-300 ${
-                      selectedItem === item.id ? "text-primary dark:text-white" : "text-gray-400 hover:text-primary dark:hover:text-white"
+                      selectedItem === item.id
+                        ? "text-primary dark:text-white"
+                        : "text-gray-400 hover:text-primary dark:hover:text-white"
                     }`}
                   >
-                    <span className={`indicator h-[1px] bg-vero-red mr-4 transition-all duration-500 ${selectedItem === item.id ? "w-12" : "w-6"}`}></span>
+                    <span
+                      className={`indicator h-[1px] bg-vero-red mr-4 transition-all duration-500 ${selectedItem === item.id ? "w-12" : "w-6"}`}
+                    ></span>
                     <span>{item.label}</span>
                   </div>
                 ))}

@@ -74,7 +74,9 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         <div className="absolute inset-0 flex items-end">
           <div className="w-full px-8 md:px-24 pb-16">
             <div className="max-w-7xl mx-auto">
-              <span className="inline-block px-4 py-2 bg-white/90 dark:bg-black/90 text-sm font-medium mb-4 uppercase tracking-wider">{project.category}</span>
+              <span className="inline-block px-4 py-2 bg-white/90 dark:bg-black/90 text-sm font-medium mb-4 uppercase tracking-wider">
+                {project.category}
+              </span>
               <h1 className="font-abygaer text-5xl md:text-7xl text-white mb-4">{project.title}</h1>
               <div className="flex flex-wrap gap-6 text-white/90">
                 <div>
@@ -126,7 +128,9 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                       <div className="relative h-[400px] md:h-[600px]">
                         <Image src={image.src} alt={image.alt} fill className="object-cover" />
                       </div>
-                      {image.caption && <p className="text-sm text-gray-500 dark:text-gray-500 italic text-center">{image.caption}</p>}
+                      {image.caption && (
+                        <p className="text-sm text-gray-500 dark:text-gray-500 italic text-center">{image.caption}</p>
+                      )}
                     </div>
                   ))}
                 </div>
@@ -136,7 +140,9 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               {project.testimonial && (
                 <div className="bg-gray-50 dark:bg-gray-900 p-8 md:p-12">
                   <blockquote className="space-y-4">
-                    <p className="text-xl md:text-2xl font-light italic text-gray-800 dark:text-gray-200">&ldquo;{project.testimonial.quote}&rdquo;</p>
+                    <p className="text-xl md:text-2xl font-light italic text-gray-800 dark:text-gray-200">
+                      &ldquo;{project.testimonial.quote}&rdquo;
+                    </p>
                     <footer>
                       <p className="font-medium text-gray-900 dark:text-white">{project.testimonial.author}</p>
                       <p className="text-sm text-gray-600 dark:text-gray-400">{project.testimonial.role}</p>
@@ -160,7 +166,9 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                 </div>
                 {project.materials && project.materials.length > 0 && (
                   <div>
-                    <h4 className="text-sm uppercase tracking-wider text-gray-600 dark:text-gray-400 mb-2">Materials</h4>
+                    <h4 className="text-sm uppercase tracking-wider text-gray-600 dark:text-gray-400 mb-2">
+                      Materials
+                    </h4>
                     <ul className="space-y-1">
                       {project.materials.map((material, index) => (
                         <li key={index} className="text-gray-900 dark:text-white">
@@ -175,7 +183,9 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               {/* CTA */}
               <div className="bg-black dark:bg-white text-white dark:text-black p-6 space-y-4">
                 <h4 className="font-abygaer text-xl">Interested in a similar project?</h4>
-                <p className="text-sm text-white/80 dark:text-black/80">Let&apos;s discuss how we can bring your vision to life.</p>
+                <p className="text-sm text-white/80 dark:text-black/80">
+                  Let&apos;s discuss how we can bring your vision to life.
+                </p>
                 <Link
                   href="/contact"
                   className="inline-block w-full text-center px-6 py-3 bg-white dark:bg-black text-black dark:text-white hover:bg-gray-100 dark:hover:bg-gray-900 transition-colors"

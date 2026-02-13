@@ -129,7 +129,9 @@ export const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, autoScroll
               <div
                 key={`${index}`}
                 className="flex-shrink-0 relative h-20 flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity duration-300"
-                style={{ width: `calc((100% - ${(visibleLogos - 1) * (visibleLogos >= 6 ? 3 : 2)}rem) / ${visibleLogos})` }}
+                style={{
+                  width: `calc((100% - ${(visibleLogos - 1) * (visibleLogos >= 6 ? 3 : 2)}rem) / ${visibleLogos})`,
+                }}
               >
                 <Image src={image.src} alt={image.alt} fill className="object-contain" />
               </div>
@@ -145,7 +147,12 @@ export const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, autoScroll
               className="hidden md:flex absolute left-0 md:-left-12 lg:-left-16 top-1/2 -translate-y-1/2 w-12 h-12 items-center justify-center text-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-white/10 transition-all duration-300 rounded-full group"
               aria-label="Previous logo"
             >
-              <svg className="w-6 h-6 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg
+                className="w-6 h-6 group-hover:scale-110 transition-transform"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
             </button>
@@ -154,7 +161,12 @@ export const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, autoScroll
               className="hidden md:flex absolute right-0 md:-right-12 lg:-right-16 top-1/2 -translate-y-1/2 w-12 h-12 items-center justify-center text-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-white/10 transition-all duration-300 rounded-full group"
               aria-label="Next logo"
             >
-              <svg className="w-6 h-6 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg
+                className="w-6 h-6 group-hover:scale-110 transition-transform"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </button>

@@ -95,7 +95,12 @@
     "client": "Boutique Luxury Hotel",
     "scope": "Lobby renovation, bar area, and guest bathroom installations",
     "materials": ["White Onyx", "Honey Onyx", "Travertine", "Italian Marble"],
-    "features": ["Backlit onyx feature walls", "Custom bar top with live edges", "Marble check-in counters", "Designer bathroom installations"],
+    "features": [
+      "Backlit onyx feature walls",
+      "Custom bar top with live edges",
+      "Marble check-in counters",
+      "Designer bathroom installations"
+    ],
     "images": [
       {
         "src": "/images/home-slider/1.jpg",
@@ -130,7 +135,12 @@
     "client": "Boutique Luxury Hotel",
     "scope": "Lobby renovation, bar area, and guest bathroom installations",
     "materials": ["White Onyx", "Honey Onyx", "Travertine", "Italian Marble"],
-    "features": ["Backlit onyx feature walls", "Custom bar top with live edges", "Marble check-in counters", "Designer bathroom installations"],
+    "features": [
+      "Backlit onyx feature walls",
+      "Custom bar top with live edges",
+      "Marble check-in counters",
+      "Designer bathroom installations"
+    ],
     "images": [
       {
         "src": "/images/home-slider/1.jpg",

@@ -90,10 +90,20 @@ export const Hero: React.FC<HeroBlockData> = ({ slides, autoScrollInterval = 500
           <div
             key={index}
             className={`absolute inset-0 transition-all duration-700 ease-in-out ${
-              index === currentSlide ? "opacity-100 translate-x-0" : index < currentSlide ? "opacity-0 -translate-x-full" : "opacity-0 translate-x-full"
+              index === currentSlide
+                ? "opacity-100 translate-x-0"
+                : index < currentSlide
+                  ? "opacity-0 -translate-x-full"
+                  : "opacity-0 translate-x-full"
             }`}
           >
-            <Image alt={slide.imageAlt} className="absolute inset-0 w-full h-full object-cover opacity-70" src={slide.image} fill priority={index === 0} />
+            <Image
+              alt={slide.imageAlt}
+              className="absolute inset-0 w-full h-full object-cover opacity-70"
+              src={slide.image}
+              fill
+              priority={index === 0}
+            />
           </div>
         ))}
       </div>
@@ -118,7 +128,12 @@ export const Hero: React.FC<HeroBlockData> = ({ slides, autoScrollInterval = 500
             className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 flex items-center justify-center text-white hover:bg-white/10 transition-all duration-300 rounded-full group"
             aria-label="Previous slide"
           >
-            <svg className="w-6 h-6 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg
+              className="w-6 h-6 group-hover:scale-110 transition-transform"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
           </button>
@@ -127,7 +142,12 @@ export const Hero: React.FC<HeroBlockData> = ({ slides, autoScrollInterval = 500
             className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 flex items-center justify-center text-white hover:bg-white/10 transition-all duration-300 rounded-full group"
             aria-label="Next slide"
           >
-            <svg className="w-6 h-6 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg
+              className="w-6 h-6 group-hover:scale-110 transition-transform"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </button>
