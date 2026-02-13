@@ -80,14 +80,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const { header, footer } = globalDtata;
-  const { copyright, locations } = footer;
 
   return (
     <html lang="en">
       <body className={`${madeTommy.variable} ${avenirNext.variable} ${abygaer.variable} antialiased`}>
         <Header links={header} />
         {children}
-        <Footer locations={locations} copyright={copyright} />
+        <Footer footer={footer} />
       </body>
     </html>
   );

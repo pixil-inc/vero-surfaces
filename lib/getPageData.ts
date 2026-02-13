@@ -1,11 +1,20 @@
 import pagesData from "@/data/pages.json";
+import {
+  HeroBlockData,
+  FeaturedProjectsBlockData,
+  ImageCarouselBlockData,
+  SideBySideBlockData,
+  ProjectsGridBlockData,
+  ToggleListBlockData,
+} from "@/types/blocks";
 
-export type BlockType = "hero" | "featured-projects" | "image-carousel" | "side-by-side" | "image-columns" | "projects-grid" | "toggle-list";
-
-export interface Block {
-  type: BlockType;
-  data: Record<string, any>;
-}
+export type Block =
+  | { type: "hero"; data: HeroBlockData }
+  | { type: "featured-projects"; data: FeaturedProjectsBlockData }
+  | { type: "image-carousel"; data: ImageCarouselBlockData }
+  | { type: "side-by-side"; data: SideBySideBlockData }
+  | { type: "projects-grid"; data: ProjectsGridBlockData }
+  | { type: "toggle-list"; data: ToggleListBlockData };
 
 export interface PageData {
   title: string;
@@ -18,7 +27,7 @@ export interface PagesData {
 }
 
 export function getPageData(slug: string): PageData | null {
-  const pages = pagesData as PagesData;
+  const pages = pagesData as unknown as PagesData;
   return pages[slug] || null;
 }
 

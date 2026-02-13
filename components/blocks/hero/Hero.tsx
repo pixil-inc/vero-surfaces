@@ -72,6 +72,7 @@ export const Hero: React.FC<HeroBlockData> = ({ slides, autoScrollInterval = 500
   };
 
   const currentSlideData = slides[currentSlide];
+  const { preheading, heading, copy } = currentSlideData.content;
   const sliderHeight = fullHeight ? "slider-h-full" : "slider-h-70";
 
   return (
@@ -99,14 +100,14 @@ export const Hero: React.FC<HeroBlockData> = ({ slides, autoScrollInterval = 500
 
       {/* Content */}
       <div key={currentSlide} className="relative z-10 text-center px-4 animate-fadeIn">
-        {currentSlideData?.preheading && (
+        {preheading && (
           <>
-            <span className="pre-heading text-white">{currentSlideData.preheading}</span>
+            <span className="pre-heading text-white">{preheading}</span>
             <br />
           </>
         )}
-        <h1 className="font-abygaer text-5xl md:text-8xl text-white mb-6 font-medium">{currentSlideData?.title}</h1>
-        <p className="text-white/80 text-sm md:text-base uppercase tracking-[0.3em] font-light">{currentSlideData?.description}</p>
+        <h1 className="font-abygaer text-5xl md:text-8xl text-white mb-6 font-medium">{heading}</h1>
+        <p className="text-white/80 text-sm md:text-base uppercase tracking-[0.3em] font-light">{copy}</p>
       </div>
 
       {/* Navigation Arrows */}

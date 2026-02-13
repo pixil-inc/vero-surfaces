@@ -3,13 +3,17 @@ import Image from "next/image";
 import Link from "next/link";
 
 type FooterProps = {
-  copyright: string;
-  locations: { city: string; address: string }[];
-  email: string;
-  phone: string;
+  footer: {
+    copyright: string;
+    locations: { city: string; address: string }[];
+    email: string;
+    phone: string;
+  };
 };
 
-export const Footer: React.FC<FooterProps> = ({ copyright, locations, email, phone }) => {
+export const Footer: React.FC<FooterProps> = ({ footer }) => {
+  const { copyright, locations, email, phone } = footer;
+
   return (
     <footer className="pt-24 pb-12 px-8 md:px-24 bg-background-light dark:bg-background-dark border-t border-gray-100 dark:border-gray-900">
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-12 gap-y-16 mb-24">

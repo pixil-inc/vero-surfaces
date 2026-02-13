@@ -16,7 +16,8 @@ export interface ContentData {
   copy?: string;
 }
 
-export interface HeroSlideData extends ContentData {
+export interface HeroSlideData {
+  content: ContentData;
   image: string;
   imageAlt: string;
   fullHeight?: boolean;

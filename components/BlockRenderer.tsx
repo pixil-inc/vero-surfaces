@@ -32,7 +32,9 @@ export const BlockRenderer: React.FC<BlockRendererProps> = ({ blocks }) => {
             return <ToggleList key={index} {...block.data} />;
 
           default:
-            console.warn(`Unknown block type: ${block.type}`);
+            // Exhaustiveness check - should never reach here if all cases are handled
+            const _exhaustiveCheck: never = block;
+            console.warn(`Unknown block type:`, _exhaustiveCheck);
             return null;
         }
       })}

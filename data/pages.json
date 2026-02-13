@@ -8,21 +8,27 @@
         "data": {
           "slides": [
             {
-              "preheading": "Timeless Elegance",
-              "title": "Natural Stone Surfaces",
-              "description": "Premium quality for discerning projects",
+              "content": {
+                "preheading": "Timeless Elegance",
+                "heading": "Natural Stone Surfaces",
+                "copy": "Premium quality for discerning projects"
+              },
               "image": "/images/home-slider/1.jpg",
               "imageAlt": "Luxury marble surface"
             },
             {
-              "title": "Crafted Excellence",
-              "description": "Over 25 years of stone mastery",
+              "content": {
+                "heading": "Stone craftsmanship",
+                "copy": "Over 25 years of stone mastery"
+              },
               "image": "/images/home-slider/2.jpg",
               "imageAlt": "Professional stone installation"
             },
             {
-              "title": "Crafted Excellence",
-              "description": "Over 25 years of stone mastery",
+              "content": {
+                "heading": "Crafted Excellence",
+                "copy": "Over 25 years of stone mastery"
+              },
               "image": "/images/home-slider/3.jpg",
               "imageAlt": "Professional stone installation"
             }
@@ -128,8 +134,11 @@
         "data": {
           "slides": [
             {
-              "title": "Our Story",
-              "description": "25 years of stone craftsmanship",
+              "content": {
+                "preheading": "Our Story",
+                "heading": "25 years of stone craftsmanship",
+                "copy": "About Vero Surfaces"
+              },
               "image": "/images/home-slider/1.jpg",
               "imageAlt": "About Vero Surfaces",
               "fullHeight": false
@@ -158,8 +167,10 @@
         "data": {
           "slides": [
             {
-              "title": "Our Portfolio",
-              "description": "Showcasing excellence in stone",
+              "content": {
+                "heading": "Our Portfolio",
+                "copy": "Showcasing excellence in stone"
+              },
               "image": "/images/projects-hero.jpg",
               "imageAlt": "Featured projects",
               "fullHeight": false
@@ -170,8 +181,10 @@
       {
         "type": "projects-grid",
         "data": {
-          "title": "Our Work",
-          "description": "Discover our latest installations across residential, commercial, and hospitality projects"
+          "content": {
+            "heading": "Our Work",
+            "copy": "Discover our latest installations across residential, commercial, and hospitality projects"
+          }
         }
       }
     ]
