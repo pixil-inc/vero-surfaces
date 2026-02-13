@@ -1,93 +1,53 @@
 import React from "react";
+import Image from "next/image";
+import { FeaturedProjectsBlockData } from "@/types/blocks";
+import { Button } from "@/components/atoms";
 
-type FeaturedProjectsProps = {
-  title: string;
-  description: string;
-  projects?: {
-    image: string;
-    alt: string;
-    category: string;
-    name: string;
-    description: string;
-  }[];
-};
+export const FeaturedProjects: React.FC<FeaturedProjectsBlockData> = ({ content, projects }) => {
+  const { preheading, heading, copy } = content;
 
-export const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({ title, description, projects }) => {
   return (
-    <section className="bg-gray-200 py-32 px-8 md:px-24 bg-background-light dark:bg-background-dark">
-      <div className="max-w-7xl mx-auto">
+    <section className="bg-background-light dark:bg-background-dark bg-gray-200 px-8 py-32 md:px-24">
+      <div className="mx-auto max-w-7xl">
         <div className="flex gap-20">
           <div className="w-full md:w-2/5">
-            <div className="md:sticky md:top-32 space-y-8">
+            <div className="space-y-8 md:sticky md:top-32">
               <div className="space-y-4">
-                <span className="pre-heading">PORTFOLIO OF EXCELLENCE</span>
-                <h2 className="heading">Crafting legacies through natural stone.</h2>
+                <span className="pre-heading">{preheading}</span>
+                <h2 className="heading">{heading}</h2>
               </div>
-              <p className="text-gray-600 dark:text-gray-400 leading-relaxed max-w-md">
-                With over 25 years of expertise in the stone industry, we've set a new standard for excellence. From
-                sourcing rare marbles in Carrara to precision installation in modern landmarks, our commitment to
-                quality is unwavering.
-              </p>
+              <p className="max-w-md leading-relaxed text-gray-600 dark:text-gray-400">{copy}</p>
               <a
-                className="border border-primary dark:border-white px-8 py-3 text-[10px] uppercase tracking-widest hover:bg-primary hover:text-white dark:hover:bg-white dark:hover:text-black transition-all"
+                className="border-primary hover:bg-primary border px-8 py-3 text-[10px] tracking-widest uppercase transition-all hover:text-white dark:border-white dark:hover:bg-white dark:hover:text-black"
                 href="#"
               >
                 View All Projects
               </a>
             </div>
           </div>
-          <div className="w-full m:w-3/5">
-            <div className="space-y-6 group">
-              <div className="overflow-hidden">
-                <img
-                  alt="Melbourne Square Project"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrQCXlDLln4mLa5C_cIhIRkS6_mKqMiWNaNH4pNwpNIo9Y-ZGuvTF1naX7XyDsZxebm_q7RFIJHZtlIApl-MQJmiRH_b0ZMv17tZqNWK5xEHBocoaqlADlsu8_P08nHa8hnbGOqZ0yiTcrcYjiWl-hEwJpOYF-hOOhmsIo55a7YwjJCkWIXC0T1n4XDOaD3ht4tjxryu17oo5nd7hI6xmx62Ylr9V8Pey5JAMUltD3gmX-GZuDMhoBMz0Te14UsoGID7OSInJCJyvz"
-                />
-              </div>
-              <div className="space-y-2">
-                <span className="text-[10px] uppercase tracking-widest text-gray-500">Commercial · Residential</span>
-                <h3 className="text-2xl font-display font-medium">The Azure Towers</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
-                  A $1.2 billion precinct featuring custom-quarried Italian Travertine throughout the lobbies and
-                  penthouse suites.
-                </p>
-              </div>
-            </div>
-            <div className="space-y-6 group">
-              <div className="overflow-hidden">
-                <img
-                  alt="Melbourne Square Project"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrQCXlDLln4mLa5C_cIhIRkS6_mKqMiWNaNH4pNwpNIo9Y-ZGuvTF1naX7XyDsZxebm_q7RFIJHZtlIApl-MQJmiRH_b0ZMv17tZqNWK5xEHBocoaqlADlsu8_P08nHa8hnbGOqZ0yiTcrcYjiWl-hEwJpOYF-hOOhmsIo55a7YwjJCkWIXC0T1n4XDOaD3ht4tjxryu17oo5nd7hI6xmx62Ylr9V8Pey5JAMUltD3gmX-GZuDMhoBMz0Te14UsoGID7OSInJCJyvz"
-                />
-              </div>
-              <div className="space-y-2">
-                <span className="text-[10px] uppercase tracking-widest text-gray-500">Commercial · Residential</span>
-                <h3 className="text-2xl font-display font-medium">The Azure Towers</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
-                  A $1.2 billion precinct featuring custom-quarried Italian Travertine throughout the lobbies and
-                  penthouse suites.
-                </p>
-              </div>
-            </div>
-            <div className="space-y-6 group">
-              <div className="overflow-hidden">
-                <img
-                  alt="Melbourne Square Project"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrQCXlDLln4mLa5C_cIhIRkS6_mKqMiWNaNH4pNwpNIo9Y-ZGuvTF1naX7XyDsZxebm_q7RFIJHZtlIApl-MQJmiRH_b0ZMv17tZqNWK5xEHBocoaqlADlsu8_P08nHa8hnbGOqZ0yiTcrcYjiWl-hEwJpOYF-hOOhmsIo55a7YwjJCkWIXC0T1n4XDOaD3ht4tjxryu17oo5nd7hI6xmx62Ylr9V8Pey5JAMUltD3gmX-GZuDMhoBMz0Te14UsoGID7OSInJCJyvz"
-                />
-              </div>
-              <div className="space-y-2">
-                <span className="text-[10px] uppercase tracking-widest text-gray-500">Commercial · Residential</span>
-                <h3 className="text-2xl font-display font-medium">The Azure Towers</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
-                  A $1.2 billion precinct featuring custom-quarried Italian Travertine throughout the lobbies and
-                  penthouse suites.
-                </p>
-              </div>
-            </div>
+          <div className="m:w-3/5 relative w-full">
+            {projects &&
+              projects.map((project, index) => (
+                <div key={index} className="group relative mb-8 block aspect-[16/10] w-full overflow-hidden rounded-lg">
+                  <Image alt={project.alt} className="object-cover" src={project.image} fill sizes="65vw" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                  <div className="absolute bottom-0 left-0 z-20 w-full px-12 pb-8 text-white transition-all duration-500 group-hover:pb-4">
+                    <div className="transition-transform duration-500 group-hover:-translate-y-4">
+                      <p className="mb-1 text-[9px] tracking-widest uppercase opacity-70">{project.category}</p>
+                      <h3 className="font-display mb-0 text-xl tracking-wide">{project.name}</h3>
+                    </div>
+                    <div className="max-h-0 overflow-hidden opacity-0 transition-all duration-500 group-hover:max-h-40 group-hover:opacity-100">
+                      <p className="mb-4 text-sm leading-relaxed font-light">{project.description}</p>
+                      {project.links &&
+                        project.links.map((link, linkIndex) => (
+                          <Button key={linkIndex} url={link.url} style="tertiary">
+                            {link.text}
+                          </Button>
+                        ))}
+                    </div>
+                  </div>
+                </div>
+              ))}
           </div>
         </div>
       </div>

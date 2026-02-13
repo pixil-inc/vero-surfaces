@@ -3,6 +3,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import { HeroBlockData } from "@/types/blocks";
+import { Button } from "@/components/atoms";
 
 export const Hero: React.FC<HeroBlockData> = ({ slides, autoScrollInterval = 5000, fullHeight = false }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -72,12 +73,14 @@ export const Hero: React.FC<HeroBlockData> = ({ slides, autoScrollInterval = 500
   };
 
   const currentSlideData = slides[currentSlide];
-  const { preheading, heading, copy } = currentSlideData.content;
+  const { content, links } = currentSlideData;
+  const { preheading, heading, copy } = content;
   const sliderHeight = fullHeight ? "slider-h-full" : "slider-h-70";
 
   return (
     <section
-      className={`${sliderHeight} hero-video-container relative flex items-center justify-center bg-gray-900 overflow-hidden transition-all duration-700`}
+      data-block-type="hero"
+      className={`${sliderHeight} hero-video-container bg-primary relative flex items-center justify-center overflow-hidden transition-all duration-700`}
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
       onTouchStart={handleTouchStart}
@@ -91,15 +94,15 @@ export const Hero: React.FC<HeroBlockData> = ({ slides, autoScrollInterval = 500
             key={index}
             className={`absolute inset-0 transition-all duration-700 ease-in-out ${
               index === currentSlide
-                ? "opacity-100 translate-x-0"
+                ? "translate-x-0 opacity-100"
                 : index < currentSlide
-                  ? "opacity-0 -translate-x-full"
-                  : "opacity-0 translate-x-full"
+                  ? "-translate-x-full opacity-0"
+                  : "translate-x-full opacity-0"
             }`}
           >
             <Image
               alt={slide.imageAlt}
-              className="absolute inset-0 w-full h-full object-cover opacity-70"
+              className="absolute inset-0 h-full w-full object-cover opacity-70"
               src={slide.image}
               fill
               priority={index === 0}
@@ -109,15 +112,24 @@ export const Hero: React.FC<HeroBlockData> = ({ slides, autoScrollInterval = 500
       </div>
 
       {/* Content */}
-      <div key={currentSlide} className="relative z-10 text-center px-4 animate-fadeIn">
+      <div key={currentSlide} className="animate-fadeIn relative z-10 px-4 text-center">
         {preheading && (
           <>
             <span className="pre-heading text-white">{preheading}</span>
             <br />
           </>
         )}
-        <h1 className="font-abygaer text-5xl md:text-8xl text-white mb-6 font-medium">{heading}</h1>
-        <p className="text-white/80 text-sm md:text-base uppercase tracking-[0.3em] font-light">{copy}</p>
+        <h1 className="font-abygaer mb-6 text-5xl font-medium text-white md:text-8xl">{heading}</h1>
+        <p className="text-sm font-light tracking-[0.3em] text-white/80 uppercase md:text-base">{copy}</p>
+        {links && (
+          <div className="inline-flex gap-6">
+            {links.map((link, index) => (
+              <Button key={index} url={link.url} style={link.style}>
+                {link.text}
+              </Button>
+            ))}
+          </div>
+        )}
       </div>
 
       {/* Navigation Arrows */}
@@ -125,11 +137,11 @@ export const Hero: React.FC<HeroBlockData> = ({ slides, autoScrollInterval = 500
         <>
           <button
             onClick={prevSlide}
-            className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 flex items-center justify-center text-white hover:bg-white/10 transition-all duration-300 rounded-full group"
+            className="group absolute top-1/2 left-4 z-20 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full text-white transition-all duration-300 hover:bg-white/10 md:left-8"
             aria-label="Previous slide"
           >
             <svg
-              className="w-6 h-6 group-hover:scale-110 transition-transform"
+              className="h-6 w-6 transition-transform group-hover:scale-110"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -139,11 +151,11 @@ export const Hero: React.FC<HeroBlockData> = ({ slides, autoScrollInterval = 500
           </button>
           <button
             onClick={nextSlide}
-            className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 flex items-center justify-center text-white hover:bg-white/10 transition-all duration-300 rounded-full group"
+            className="group absolute top-1/2 right-4 z-20 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full text-white transition-all duration-300 hover:bg-white/10 md:right-8"
             aria-label="Next slide"
           >
             <svg
-              className="w-6 h-6 group-hover:scale-110 transition-transform"
+              className="h-6 w-6 transition-transform group-hover:scale-110"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -156,12 +168,12 @@ export const Hero: React.FC<HeroBlockData> = ({ slides, autoScrollInterval = 500
 
       {/* Dots Indicator */}
       {slides.length > 1 && (
-        <div className="absolute bottom-12 left-1/2 -translate-x-1/2 z-20 flex gap-2">
+        <div className="absolute bottom-12 left-1/2 z-20 flex -translate-x-1/2 gap-2">
           {slides.map((_, index) => (
             <button
               key={index}
               onClick={() => goToSlide(index)}
-              className={`w-2 h-2 rounded-full transition-all duration-300 ${index === currentSlide ? "bg-white w-8" : "bg-white/50 hover:bg-white/75"}`}
+              className={`h-2 w-2 rounded-full transition-all duration-300 ${index === currentSlide ? "w-8 bg-white" : "bg-white/50 hover:bg-white/75"}`}
               aria-label={`Go to slide ${index + 1}`}
             />
           ))}
@@ -170,11 +182,11 @@ export const Hero: React.FC<HeroBlockData> = ({ slides, autoScrollInterval = 500
 
       {/* Scroll Down Indicator */}
       {fullHeight && (
-        <div className="absolute bottom-18 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3">
-          <div className="w-6 h-10 border border-white/30 rounded-full flex justify-center pt-2">
-            <div className="w-1 h-1 bg-white rounded-full scroll-dot"></div>
+        <div className="absolute bottom-18 left-1/2 flex -translate-x-1/2 flex-col items-center gap-3">
+          <div className="flex h-10 w-6 justify-center rounded-full border border-white/30 pt-2">
+            <div className="scroll-dot h-1 w-1 rounded-full bg-white"></div>
           </div>
-          <span className="text-[9px] uppercase tracking-[0.4em] text-white/40 font-light">Discover</span>
+          <span className="text-[9px] font-light tracking-[0.4em] text-white/40 uppercase">Discover</span>
         </div>
       )}
     </section>

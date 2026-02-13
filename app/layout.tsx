@@ -86,7 +86,7 @@ export default function RootLayout({
       <body className={`${madeTommy.variable} ${avenirNext.variable} ${abygaer.variable} antialiased`}>
         <Header links={header} />
         {children}
-        <Footer footer={footer} />
+        <Footer {...footer} />
       </body>
     </html>
   );

@@ -1,155 +1,152 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { Logo } from "@/components/atoms";
+import { ImageCarousel } from "@/components/blocks/image-carousel/ImageCarousel";
+import { FooterDataProps } from "@/types/blocks";
 
-type FooterProps = {
-  footer: {
-    copyright: string;
-    locations: { city: string; address: string }[];
-    email: string;
-    phone: string;
-  };
-};
-
-export const Footer: React.FC<FooterProps> = ({ footer }) => {
-  const { copyright, locations, email, phone } = footer;
-
+export const Footer: React.FC<FooterDataProps> = ({ copyright, locations, email, phone, logos }) => {
   return (
-    <footer className="pt-24 pb-12 px-8 md:px-24 bg-background-light dark:bg-background-dark border-t border-gray-100 dark:border-gray-900">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-12 gap-y-16 mb-24">
-        <div className="space-y-8">
-          <Image
-            alt="Vero Surfaces Logo"
-            src="/images/logo/white.png"
-            width={102}
-            height={62}
-            className="inline-block mr-2"
-          />
-          <div className="space-y-6">
-            <div className="flex items-start space-x-3 text-sm text-gray-500 dark:text-gray-400">
-              <Image alt="phone icon" src="/icons/location.svg" width={14} height={14} className="inline-block mr-2" />
-              <span className="leading-relaxed">
-                {locations.map((location) => (
-                  <div key={location.city} className="mb-4">
-                    <strong>{location.city}</strong>
-                    <br />
-                    {location.address}
-                  </div>
-                ))}
-              </span>
-            </div>
-            <div className="flex items-center space-x-3 text-sm text-gray-500 dark:text-gray-400">
-              <Image alt="phone icon" src="/icons/phone.svg" width={14} height={14} className="inline-block mr-2" />
-              <span>{phone}</span>
-            </div>
-            <div className="flex items-center space-x-3 text-sm text-gray-500 dark:text-gray-400">
-              <Image alt="email icon" src="/icons/email.svg" width={14} height={14} className="inline-block mr-2" />
-              <Link href={`mailto:${email}`}>
-                <span>{email}</span>
-              </Link>
+    <>
+      <ImageCarousel images={logos} />
+      <footer className="bg-background-light dark:bg-background-dark border-t border-gray-100 px-8 pt-24 pb-12 md:px-24 dark:border-gray-900">
+        <div className="mx-auto mb-24 grid max-w-7xl grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="space-y-8">
+            <Link href="/" className="block h-[62px] w-[102px]">
+              <Logo />
+            </Link>
+            <div className="space-y-6">
+              <div className="flex items-start space-x-3 text-sm text-gray-500 dark:text-gray-400">
+                <Image
+                  alt="phone icon"
+                  src="/icons/location.svg"
+                  width={14}
+                  height={14}
+                  className="mr-2 inline-block"
+                />
+                <span className="leading-relaxed">
+                  {locations.map((location) => (
+                    <div key={location.city} className="mb-4">
+                      <strong>{location.city}</strong>
+                      <br />
+                      {location.address}
+                    </div>
+                  ))}
+                </span>
+              </div>
+              <div className="flex items-center space-x-3 text-sm text-gray-500 dark:text-gray-400">
+                <Image alt="phone icon" src="/icons/phone.svg" width={14} height={14} className="mr-2 inline-block" />
+                <span>{phone}</span>
+              </div>
+              <div className="flex items-center space-x-3 text-sm text-gray-500 dark:text-gray-400">
+                <Image alt="email icon" src="/icons/email.svg" width={14} height={14} className="mr-2 inline-block" />
+                <Link href={`mailto:${email}`}>
+                  <span>{email}</span>
+                </Link>
+              </div>
             </div>
           </div>
+          <div className="space-y-8">
+            <h5 className="text-accent text-[11px] font-semibold tracking-[0.3em] uppercase">Locations</h5>
+            <nav className="flex flex-col space-y-4">
+              <a
+                className="font-display text-primary hover:text-accent dark:hover:text-accent text-sm transition-colors dark:text-gray-300"
+                href="#"
+              >
+                Home
+              </a>
+              <a
+                className="font-display text-primary hover:text-accent dark:hover:text-accent text-sm transition-colors dark:text-gray-300"
+                href="#"
+              >
+                About Us
+              </a>
+              <a
+                className="font-display text-primary hover:text-accent dark:hover:text-accent text-sm transition-colors dark:text-gray-300"
+                href="#"
+              >
+                Projects
+              </a>
+              <a
+                className="font-display text-primary hover:text-accent dark:hover:text-accent text-sm transition-colors dark:text-gray-300"
+                href="#"
+              >
+                Materials
+              </a>
+            </nav>
+          </div>
+          <div className="space-y-8">
+            <h5 className="text-accent text-[11px] font-semibold tracking-[0.3em] uppercase">Services</h5>
+            <nav className="flex flex-col space-y-4">
+              <a
+                className="font-display text-primary hover:text-accent dark:hover:text-accent text-sm transition-colors dark:text-gray-300"
+                href="#"
+              >
+                Consultation
+              </a>
+              <a
+                className="font-display text-primary hover:text-accent dark:hover:text-accent text-sm transition-colors dark:text-gray-300"
+                href="#"
+              >
+                Sourcing
+              </a>
+              <a
+                className="font-display text-primary hover:text-accent dark:hover:text-accent text-sm transition-colors dark:text-gray-300"
+                href="#"
+              >
+                Installation
+              </a>
+              <a
+                className="font-display text-primary hover:text-accent dark:hover:text-accent text-sm transition-colors dark:text-gray-300"
+                href="#"
+              >
+                Maintenance
+              </a>
+            </nav>
+          </div>
+          <div className="space-y-8">
+            <h5 className="text-accent text-[11px] font-semibold tracking-[0.3em] uppercase">Follow Us</h5>
+            <nav className="flex flex-col space-y-4">
+              <a
+                className="font-display text-primary hover:text-accent dark:hover:text-accent text-sm transition-colors dark:text-gray-300"
+                href="#"
+              >
+                Instagram
+              </a>
+              <a
+                className="font-display text-primary hover:text-accent dark:hover:text-accent text-sm transition-colors dark:text-gray-300"
+                href="#"
+              >
+                LinkedIn
+              </a>
+              <a
+                className="font-display text-primary hover:text-accent dark:hover:text-accent text-sm transition-colors dark:text-gray-300"
+                href="#"
+              >
+                Pinterest
+              </a>
+            </nav>
+          </div>
         </div>
-        <div className="space-y-8">
-          <h5 className="text-[11px] uppercase tracking-[0.3em] font-semibold text-accent">Locations</h5>
-          <nav className="flex flex-col space-y-4">
+        <div className="flex flex-col items-center justify-between gap-8 border-t border-gray-100 pt-12 md:flex-row dark:border-gray-900">
+          <div className="text-[10px] tracking-[0.2em] text-gray-400 uppercase">{copyright}</div>
+          <div className="flex space-x-12">
             <a
-              className="text-sm font-display text-primary dark:text-gray-300 hover:text-accent dark:hover:text-accent transition-colors"
+              className="hover:text-primary text-[10px] tracking-[0.2em] text-gray-400 uppercase transition-colors dark:hover:text-white"
               href="#"
             >
-              Home
+              Privacy Policy
             </a>
             <a
-              className="text-sm font-display text-primary dark:text-gray-300 hover:text-accent dark:hover:text-accent transition-colors"
+              className="hover:text-primary text-[10px] tracking-[0.2em] text-gray-400 uppercase transition-colors dark:hover:text-white"
               href="#"
             >
-              About Us
+              Terms of Service
             </a>
-            <a
-              className="text-sm font-display text-primary dark:text-gray-300 hover:text-accent dark:hover:text-accent transition-colors"
-              href="#"
-            >
-              Projects
-            </a>
-            <a
-              className="text-sm font-display text-primary dark:text-gray-300 hover:text-accent dark:hover:text-accent transition-colors"
-              href="#"
-            >
-              Materials
-            </a>
-          </nav>
+          </div>
         </div>
-        <div className="space-y-8">
-          <h5 className="text-[11px] uppercase tracking-[0.3em] font-semibold text-accent">Services</h5>
-          <nav className="flex flex-col space-y-4">
-            <a
-              className="text-sm font-display text-primary dark:text-gray-300 hover:text-accent dark:hover:text-accent transition-colors"
-              href="#"
-            >
-              Consultation
-            </a>
-            <a
-              className="text-sm font-display text-primary dark:text-gray-300 hover:text-accent dark:hover:text-accent transition-colors"
-              href="#"
-            >
-              Sourcing
-            </a>
-            <a
-              className="text-sm font-display text-primary dark:text-gray-300 hover:text-accent dark:hover:text-accent transition-colors"
-              href="#"
-            >
-              Installation
-            </a>
-            <a
-              className="text-sm font-display text-primary dark:text-gray-300 hover:text-accent dark:hover:text-accent transition-colors"
-              href="#"
-            >
-              Maintenance
-            </a>
-          </nav>
-        </div>
-        <div className="space-y-8">
-          <h5 className="text-[11px] uppercase tracking-[0.3em] font-semibold text-accent">Follow Us</h5>
-          <nav className="flex flex-col space-y-4">
-            <a
-              className="text-sm font-display text-primary dark:text-gray-300 hover:text-accent dark:hover:text-accent transition-colors"
-              href="#"
-            >
-              Instagram
-            </a>
-            <a
-              className="text-sm font-display text-primary dark:text-gray-300 hover:text-accent dark:hover:text-accent transition-colors"
-              href="#"
-            >
-              LinkedIn
-            </a>
-            <a
-              className="text-sm font-display text-primary dark:text-gray-300 hover:text-accent dark:hover:text-accent transition-colors"
-              href="#"
-            >
-              Pinterest
-            </a>
-          </nav>
-        </div>
-      </div>
-      <div className="pt-12 border-t border-gray-100 dark:border-gray-900 flex flex-col md:flex-row justify-between items-center gap-8">
-        <div className="text-[10px] uppercase tracking-[0.2em] text-gray-400">{copyright}</div>
-        <div className="flex space-x-12">
-          <a
-            className="text-[10px] uppercase tracking-[0.2em] text-gray-400 hover:text-primary dark:hover:text-white transition-colors"
-            href="#"
-          >
-            Privacy Policy
-          </a>
-          <a
-            className="text-[10px] uppercase tracking-[0.2em] text-gray-400 hover:text-primary dark:hover:text-white transition-colors"
-            href="#"
-          >
-            Terms of Service
-          </a>
-        </div>
-      </div>
-    </footer>
+      </footer>
+    </>
   );
 };
 

@@ -10,6 +10,16 @@
     "locations": [
       { "city": "Vaughan", "address": "10 Westcreek Dr, Unit 14, Vaughan, ON L4L 9R5" },
       { "city": "Quebec", "address": "527 Av. Meloche, Dorval, QC H9P 2W2" }
+    ],
+    "logos": [
+      { "src": "/images/logos/amg.png", "alt": "Partner Brand 1" },
+      { "src": "/images/logos/audi.svg", "alt": "Partner Brand 2" },
+      { "src": "/images/logos/facebook.png", "alt": "Partner Brand 3" },
+      { "src": "/images/logos/google.png", "alt": "Partner Brand 4" },
+      { "src": "/images/logos/honda.png", "alt": "Partner Brand 5" },
+      { "src": "/images/logos/intuit.svg", "alt": "Partner Brand 6" },
+      { "src": "/images/logos/roblox.png", "alt": "Partner Brand 7" },
+      { "src": "/images/logos/youtube.png", "alt": "Partner Brand 8" }
     ]
   },
   "links": [

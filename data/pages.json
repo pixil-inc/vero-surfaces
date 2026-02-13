@@ -13,6 +13,18 @@
                 "heading": "Natural Stone Surfaces",
                 "copy": "Premium quality for discerning projects"
               },
+              "links": [
+                {
+                  "text": "Check out our inventory",
+                  "url": "#",
+                  "style": "primary"
+                },
+                {
+                  "text": "Learn More",
+                  "url": "#",
+                  "style": "tertiary"
+                }
+              ],
               "image": "/images/home-slider/1.jpg",
               "imageAlt": "Luxury marble surface"
             },
@@ -34,7 +46,7 @@
             }
           ],
           "fullHeight": true,
-          "autoScrollInterval": 3000
+          "autoScrollInterval": 6000
         }
       },
       {
@@ -89,38 +101,37 @@
       {
         "type": "featured-projects",
         "data": {
-          "title": "Our Featured Projects",
-          "description": "Take a look at some of our recent work",
+          "content": {
+            "preheading": "Featured Projects",
+            "heading": "Proud Work",
+            "copy": "Take a look at some of our recent work"
+          },
           "projects": [
             {
-              "image": "/images/project1.jpg",
+              "image": "/images/home-slider/1.jpg",
               "alt": "Luxury residential project",
               "category": "Residential",
               "name": "Modern Villa Estate",
-              "description": "Premium marble installation featuring Calacatta Gold"
+              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+              "links": [
+                {
+                  "text": "View Project",
+                  "url": "#"
+                },
+                {
+                  "text": "View Project 2",
+                  "url": "#"
+                }
+              ]
             },
             {
-              "image": "/images/project2.jpg",
+              "image": "/images/home-slider/2.jpg",
               "alt": "Commercial office building",
               "category": "Commercial",
               "name": "Corporate Headquarters",
-              "description": "Elegant granite surfaces throughout executive floors"
+              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
             }
           ]
-        }
-      },
-      {
-        "type": "image-carousel",
-        "data": {
-          "images": [
-            { "src": "/images/logo/brand-1.png", "alt": "Partner Brand 1" },
-            { "src": "/images/logo/brand-2.png", "alt": "Partner Brand 2" },
-            { "src": "/images/logo/brand-3.png", "alt": "Partner Brand 3" },
-            { "src": "/images/logo/brand-4.png", "alt": "Partner Brand 4" },
-            { "src": "/images/logo/brand-5.png", "alt": "Partner Brand 5" },
-            { "src": "/images/logo/brand-6.png", "alt": "Partner Brand 6" }
-          ],
-          "autoScrollInterval": 3000
         }
       }
     ]

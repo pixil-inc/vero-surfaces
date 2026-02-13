@@ -109,18 +109,18 @@ export const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, autoScroll
 
   return (
     <section
-      className="py-32 bg-gray-50 dark:bg-[#111] px-8 md:px-24"
+      className="bg-gray-50 px-8 py-32 md:px-24 dark:bg-[#111]"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
     >
-      <div className="max-w-7xl mx-auto relative">
+      <div className="relative mx-auto max-w-7xl">
         {/* Logo Grid Container with Slide Animation */}
         <div className="relative overflow-hidden">
           <div
-            className={`flex gap-8 md:gap-12 items-center ${isTransitioning ? "transition-transform duration-700 ease-in-out" : ""}`}
+            className={`flex items-center gap-8 md:gap-12 ${isTransitioning ? "transition-transform duration-700 ease-in-out" : ""}`}
             style={{
               transform: `translateX(${translateX}%)`,
             }}
@@ -128,7 +128,7 @@ export const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, autoScroll
             {extendedImages.map((image, index) => (
               <div
                 key={`${index}`}
-                className="flex-shrink-0 relative h-20 flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity duration-300"
+                className="relative flex h-20 flex-shrink-0 items-center justify-center opacity-70 transition-opacity duration-300 hover:opacity-100"
                 style={{
                   width: `calc((100% - ${(visibleLogos - 1) * (visibleLogos >= 6 ? 3 : 2)}rem) / ${visibleLogos})`,
                 }}
@@ -144,11 +144,11 @@ export const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, autoScroll
           <>
             <button
               onClick={prevLogo}
-              className="hidden md:flex absolute left-0 md:-left-12 lg:-left-16 top-1/2 -translate-y-1/2 w-12 h-12 items-center justify-center text-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-white/10 transition-all duration-300 rounded-full group"
+              className="group absolute top-1/2 left-0 hidden h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full text-gray-800 transition-all duration-300 hover:bg-gray-200 md:-left-12 md:flex lg:-left-16 dark:text-white dark:hover:bg-white/10"
               aria-label="Previous logo"
             >
               <svg
-                className="w-6 h-6 group-hover:scale-110 transition-transform"
+                className="h-6 w-6 transition-transform group-hover:scale-110"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -158,11 +158,11 @@ export const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, autoScroll
             </button>
             <button
               onClick={nextLogo}
-              className="hidden md:flex absolute right-0 md:-right-12 lg:-right-16 top-1/2 -translate-y-1/2 w-12 h-12 items-center justify-center text-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-white/10 transition-all duration-300 rounded-full group"
+              className="group absolute top-1/2 right-0 hidden h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full text-gray-800 transition-all duration-300 hover:bg-gray-200 md:-right-12 md:flex lg:-right-16 dark:text-white dark:hover:bg-white/10"
               aria-label="Next logo"
             >
               <svg
-                className="w-6 h-6 group-hover:scale-110 transition-transform"
+                className="h-6 w-6 transition-transform group-hover:scale-110"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -175,15 +175,15 @@ export const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, autoScroll
 
         {/* Page Indicator */}
         {images.length > 1 && (
-          <div className="flex md:hidden justify-center mt-8 gap-2">
+          <div className="mt-8 flex justify-center gap-2 md:hidden">
             {images.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentIndex(index)}
-                className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                className={`h-2 w-2 rounded-full transition-all duration-300 ${
                   index === ((currentIndex % images.length) + images.length) % images.length
-                    ? "bg-gray-800 dark:bg-white w-8"
-                    : "bg-gray-400 dark:bg-white/50 hover:bg-gray-600 dark:hover:bg-white/75"
+                    ? "w-8 bg-gray-800 dark:bg-white"
+                    : "bg-gray-400 hover:bg-gray-600 dark:bg-white/50 dark:hover:bg-white/75"
                 }`}
                 aria-label={`Go to logo ${index + 1}`}
               />

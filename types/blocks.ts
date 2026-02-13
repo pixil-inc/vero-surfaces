@@ -18,6 +18,7 @@ export interface ContentData {
 
 export interface HeroSlideData {
   content: ContentData;
+  links?: LinkData[];
   image: string;
   imageAlt: string;
   fullHeight?: boolean;
@@ -31,14 +32,15 @@ export interface HeroBlockData {
 
 // Featured Projects Block
 export interface FeaturedProjectsBlockData {
-  title: string;
-  description: string;
+  content: ContentData;
+  links?: LinkData[];
   projects?: Array<{
     image: string;
     alt: string;
     category: string;
     name: string;
     description: string;
+    links?: LinkData[];
   }>;
 }
 
@@ -80,6 +82,14 @@ export interface ToggleListBlockData {
     subtitle: string;
     description: string;
   }>;
+}
+
+export interface FooterDataProps {
+  copyright: string;
+  locations: { city: string; address: string }[];
+  email: string;
+  phone: string;
+  logos: { src: string; alt: string }[];
 }
 
 // Add new block types here as you create them

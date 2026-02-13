@@ -23,27 +23,27 @@ export const ProjectsGrid: React.FC<ProjectsGridProps> = ({ title, description, 
     selectedCategory === "All" ? allProjects : allProjects.filter((project) => project.category === selectedCategory);
 
   return (
-    <section className="py-24 px-8 md:px-24 bg-white dark:bg-black">
-      <div className="max-w-7xl mx-auto">
+    <section className="bg-white px-8 py-24 md:px-24 dark:bg-black">
+      <div className="mx-auto max-w-7xl">
         {/* Header */}
         {(title || description) && (
-          <div className="mb-16 text-center max-w-3xl mx-auto">
-            {title && <h2 className="font-abygaer text-4xl md:text-6xl mb-6">{title}</h2>}
-            {description && <p className="text-gray-600 dark:text-gray-400 text-lg">{description}</p>}
+          <div className="mx-auto mb-16 max-w-3xl text-center">
+            {title && <h2 className="font-abygaer mb-6 text-4xl md:text-6xl">{title}</h2>}
+            {description && <p className="text-lg text-gray-600 dark:text-gray-400">{description}</p>}
           </div>
         )}
 
         {/* Category Filter */}
         {!filterByCategory && (
-          <div className="flex flex-wrap justify-center gap-3 mb-12">
+          <div className="mb-12 flex flex-wrap justify-center gap-3">
             {categories.map((category) => (
               <button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
-                className={`px-6 py-2 rounded-lg text-sm uppercase tracking-wider transition-all ${
+                className={`rounded-lg px-6 py-2 text-sm tracking-wider uppercase transition-all ${
                   selectedCategory === category
-                    ? "bg-black dark:bg-white text-white dark:text-black"
-                    : "bg-gray-100 dark:bg-gray-900 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-800"
+                    ? "bg-black text-white dark:bg-white dark:text-black"
+                    : "bg-gray-100 text-gray-600 hover:bg-gray-200 dark:bg-gray-900 dark:text-gray-400 dark:hover:bg-gray-800"
                 }`}
               >
                 {category}
@@ -53,12 +53,12 @@ export const ProjectsGrid: React.FC<ProjectsGridProps> = ({ title, description, 
         )}
 
         {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {filteredProjects.map((project) => (
             <Link
               key={project.slug}
               href={`/project/${project.slug}`}
-              className="group block overflow-hidden rounded-lg bg-gray-50 dark:bg-gray-900 hover:shadow-xl transition-all duration-300"
+              className="group block overflow-hidden rounded-lg bg-gray-50 transition-all duration-300 hover:shadow-xl dark:bg-gray-900"
             >
               {/* Project Image */}
               <div className="relative h-72 overflow-hidden">
@@ -66,27 +66,27 @@ export const ProjectsGrid: React.FC<ProjectsGridProps> = ({ title, description, 
                   src={project.heroImage}
                   alt={project.heroImageAlt}
                   fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-700"
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
-                <span className="absolute top-4 left-4 px-3 py-1 bg-white/90 dark:bg-black/90 text-xs font-medium uppercase tracking-wider">
+                <div className="absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/20" />
+                <span className="absolute top-4 left-4 bg-white/90 px-3 py-1 text-xs font-medium tracking-wider uppercase dark:bg-black/90">
                   {project.category}
                 </span>
               </div>
 
               {/* Project Info */}
-              <div className="p-6 space-y-3">
-                <h3 className="font-abygaer text-2xl group-hover:text-accent transition-colors">{project.title}</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">{project.description}</p>
-                <div className="flex items-center gap-4 text-xs text-gray-500 dark:text-gray-500 uppercase tracking-wider">
+              <div className="space-y-3 p-6">
+                <h3 className="font-abygaer group-hover:text-accent text-2xl transition-colors">{project.title}</h3>
+                <p className="line-clamp-2 text-sm text-gray-600 dark:text-gray-400">{project.description}</p>
+                <div className="flex items-center gap-4 text-xs tracking-wider text-gray-500 uppercase dark:text-gray-500">
                   <span>{project.location}</span>
                   <span>•</span>
                   <span>{project.year}</span>
                 </div>
-                <div className="flex items-center gap-2 text-accent text-sm font-medium pt-2">
+                <div className="text-accent flex items-center gap-2 pt-2 text-sm font-medium">
                   <span>View Project</span>
                   <svg
-                    className="w-4 h-4 group-hover:translate-x-1 transition-transform"
+                    className="h-4 w-4 transition-transform group-hover:translate-x-1"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -101,7 +101,7 @@ export const ProjectsGrid: React.FC<ProjectsGridProps> = ({ title, description, 
 
         {/* Empty State */}
         {filteredProjects.length === 0 && (
-          <div className="text-center py-16">
+          <div className="py-16 text-center">
             <p className="text-gray-500 dark:text-gray-500">No projects found in this category.</p>
           </div>
         )}
