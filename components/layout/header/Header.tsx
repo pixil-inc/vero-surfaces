@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 type HeaderProps = {
   links: { label: string; href: string }[];
@@ -7,11 +8,13 @@ type HeaderProps = {
 
 export const Header: React.FC<HeaderProps> = ({ links }) => {
   return (
-    <header className="fixed top-0 left-0 w-screen z-50 mix-blend-difference px-8 py-6">
-      <div className="max-w-7xl mx-auto">
+    <header className="fixed top-0 left-0 w-screen z-50 py-6">
+      <div className="max-w-7xl mx-auto px-6">
         <div className="flex justify-between items-center text-white">
           <div className="text-2xl font-display font-semibold tracking-widest uppercase">
-            <Image priority alt="Vero Surfaces Logo" src="/images/logo/white.png" width={102} height={62} className="inline-block mr-2" />
+            <Link href="/">
+              <Image priority alt="Vero Surfaces Logo" className="text-white" src="/images/logo.svg" width={102} height={62} className="inline-block mr-2" />
+            </Link>
           </div>
           <nav className="hidden md:flex space-x-12 text-xs uppercase tracking-widest font-medium">
             {links &&

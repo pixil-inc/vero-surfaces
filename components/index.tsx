@@ -5,3 +5,6 @@ export { SideBySide } from "./blocks/side-by-side/SideBySide";
 export { FeaturedProjects } from "./blocks/featured-projects/FeaturedProjects";
 export { ImageCarousel } from "./blocks/image-carousel/ImageCarousel";
 export { ImageColumns } from "./blocks/image-columns/ImageColumns";
+export { ToggleList } from "./blocks/toggle-list/ToggleList";
+export { ProjectsGrid } from "./blocks/projects-grid/ProjectsGrid";
+export { BlockRenderer } from "./BlockRenderer";

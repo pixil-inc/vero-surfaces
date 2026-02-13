@@ -1,4 +1,23 @@
-[
-  { "title": "Portfolio", "slug": "portfolio", "target": "_self" },
-  { "title": "Services", "slug": "services", "target": "_self" }
-]
+{
+  "header": [
+    { "label": "Projects", "href": "/projects", "target": "_self" },
+    { "label": "Company", "href": "/company", "target": "_self" }
+  ],
+  "footer": {
+    "copyright": "© 2026 Vero Surfaces. All rights reserved.",
+    "email": "info@verosurfaces.com",
+    "phone": "+1 800-647-1234",
+    "locations": [
+      { "city": "Vaughan", "address": "10 Westcreek Dr, Unit 14, Vaughan, ON L4L 9R5" },
+      { "city": "Quebec", "address": "527 Av. Meloche, Dorval, QC H9P 2W2" }
+    ]
+  },
+  "links": [
+    { "label": "Portfolio", "href": "/portfolio", "target": "_self" },
+    { "label": "Services", "href": "/services", "target": "_self" }
+  ],
+  "socials": [
+    { "label": "Portfolio", "href": "/portfolio", "target": "_self" },
+    { "label": "Services", "href": "/services", "target": "_self" }
+  ]
+}

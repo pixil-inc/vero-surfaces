@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="1000"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="1000"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill: #078c45;
+      }
+
+      .cls-3 {
+        fill: #ce202b;
+      }
+    </style>
+  </defs>
+  <g id="Layer_2">
+    <path class="cls-1" d="M980.5,204.78h-231.34c32.95,4.3,54.75,13.42,65.34,27.34,10.59,13.95,15.89,28.42,15.89,43.42v6.43c0,12.86-3.53,25.73-10.59,38.59l-261.36,493.67-263.12-495.28c-7.06-13.92-10.59-28.95-10.59-45.03v-9.65c1.16-13.92,6.76-26.53,16.78-37.79,9.99-11.26,27.37-18.49,52.1-21.71H19.83c57.67,21.46,97.12,49.32,118.32,83.62l360.25,678.6,362.01-680.21c24.73-33.22,64.74-60.55,120.09-82.01Z"></path>
+  </g>
+  <g id="Layer_3">
+    <g>
+      <path class="cls-2" d="M44.86,33.19h295.33v50.11H45.37c-13.98,0-25.31-11.33-25.31-25.31h0c0-13.69,11.1-24.8,24.8-24.8Z"></path>
+      <rect class="cls-1" x="340.18" y="33.19" width="320.12" height="50.11"></rect>
+      <path class="cls-3" d="M660.31,33.19h295.33c13.69,0,24.8,11.1,24.8,24.8v.51c0,13.69-11.1,24.8-24.8,24.8h-295.33v-50.11Z"></path>
+    </g>
+  </g>
+</svg></svg><style>@media (prefers-color-scheme: light) { :root { filter: none; } }
+@media (prefers-color-scheme: dark) { :root { filter: none; } }
+</style></svg>

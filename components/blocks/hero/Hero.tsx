@@ -2,22 +2,9 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
+import { HeroBlockData } from "@/types/blocks";
 
-type HeroSlide = {
-  preheading?: string;
-  title: string;
-  description: string;
-  image: string;
-  imageAlt: string;
-  fullHeight?: boolean;
-};
-
-type HeroProps = {
-  slides: HeroSlide[];
-  autoScrollInterval?: number;
-};
-
-export const Hero: React.FC<HeroProps> = ({ slides, autoScrollInterval = 5000 }) => {
+export const Hero: React.FC<HeroBlockData> = ({ slides, autoScrollInterval = 5000, fullHeight = false }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
@@ -74,10 +61,8 @@ export const Hero: React.FC<HeroProps> = ({ slides, autoScrollInterval = 5000 })
 
     if (Math.abs(diff) > swipeThreshold) {
       if (diff > 0) {
-        // Swiped left - next slide
         nextSlide();
       } else {
-        // Swiped right - previous slide
         prevSlide();
       }
     }
@@ -87,10 +72,11 @@ export const Hero: React.FC<HeroProps> = ({ slides, autoScrollInterval = 5000 })
   };
 
   const currentSlideData = slides[currentSlide];
+  const sliderHeight = fullHeight ? "slider-h-full" : "slider-h-70";
 
   return (
     <section
-      className={`hero-video-container min-h-screen relative flex items-center justify-center bg-gray-900 overflow-hidden transition-all duration-700`}
+      className={`${sliderHeight} hero-video-container relative flex items-center justify-center bg-gray-900 overflow-hidden transition-all duration-700`}
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
       onTouchStart={handleTouchStart}
@@ -149,7 +135,7 @@ export const Hero: React.FC<HeroProps> = ({ slides, autoScrollInterval = 5000 })
 
       {/* Dots Indicator */}
       {slides.length > 1 && (
-        <div className="absolute bottom-24 left-1/2 -translate-x-1/2 z-20 flex gap-2">
+        <div className="absolute bottom-12 left-1/2 -translate-x-1/2 z-20 flex gap-2">
           {slides.map((_, index) => (
             <button
               key={index}
@@ -162,10 +148,14 @@ export const Hero: React.FC<HeroProps> = ({ slides, autoScrollInterval = 5000 })
       )}
 
       {/* Scroll Down Indicator */}
-      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center z-20">
-        <span className="text-[10px] uppercase tracking-[0.4em] text-white mb-4">Scroll Down</span>
-        <div className="w-[1px] h-16 bg-gradient-to-b from-white to-transparent scroll-down-indicator"></div>
-      </div>
+      {fullHeight && (
+        <div className="absolute bottom-18 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3">
+          <div className="w-6 h-10 border border-white/30 rounded-full flex justify-center pt-2">
+            <div className="w-1 h-1 bg-white rounded-full scroll-dot"></div>
+          </div>
+          <span className="text-[9px] uppercase tracking-[0.4em] text-white/40 font-light">Discover</span>
+        </div>
+      )}
     </section>
   );
 };

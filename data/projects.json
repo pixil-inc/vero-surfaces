@@ -1,0 +1,157 @@
+{
+  "modern-villa-estate": {
+    "title": "Modern Villa Estate",
+    "category": "Residential",
+    "location": "Beverly Hills, CA",
+    "year": "2025",
+    "description": "A stunning residential project featuring premium Calacatta Gold marble throughout the main living spaces. This modern villa showcases our expertise in selecting and installing the finest natural stone.",
+    "heroImage": "/images/home-slider/1.jpg",
+    "heroImageAlt": "Modern villa exterior with marble facade",
+    "client": "Private Residence",
+    "scope": "Full interior stone installation, custom fabrication, and installation",
+    "materials": ["Calacatta Gold Marble", "Statuario Venato", "Nero Marquina"],
+    "features": [
+      "Custom marble fireplace surround",
+      "Kitchen island with waterfall edges",
+      "Master bathroom with floor-to-ceiling marble",
+      "Outdoor entertainment area with stone surfaces"
+    ],
+    "images": [
+      {
+        "src": "/images/home-slider/1.jpg",
+        "alt": "Living room with marble fireplace",
+        "caption": "Custom Calacatta Gold fireplace surround"
+      },
+      {
+        "src": "/images/home-slider/2.jpg",
+        "alt": "Kitchen with marble island",
+        "caption": "Waterfall edge kitchen island"
+      },
+      {
+        "src": "/images/home-slider/3.jpg",
+        "alt": "Master bathroom",
+        "caption": "Luxurious marble master bathroom"
+      },
+      {
+        "src": "/images/projects/modern-villa/4.jpg",
+        "alt": "Outdoor space",
+        "caption": "Outdoor entertainment area"
+      }
+    ],
+    "testimonial": {
+      "quote": "The attention to detail and quality of craftsmanship exceeded our expectations. Every surface is a work of art.",
+      "author": "John & Sarah Mitchell",
+      "role": "Homeowners"
+    }
+  },
+  "corporate-headquarters": {
+    "title": "Corporate Headquarters",
+    "category": "Commercial",
+    "location": "Downtown Los Angeles, CA",
+    "year": "2024",
+    "description": "An elegant commercial installation featuring granite surfaces throughout the executive floors. This project demonstrates our capability to handle large-scale commercial installations with precision and efficiency.",
+    "heroImage": "/images/home-slider/2.jpg",
+    "heroImageAlt": "Corporate lobby with granite reception desk",
+    "client": "Fortune 500 Company",
+    "scope": "Reception area, executive offices, conference rooms, and common areas",
+    "materials": ["Black Galaxy Granite", "Kashmir White Granite", "Absolute Black Granite"],
+    "features": [
+      "60-foot reception desk with integrated lighting",
+      "Executive boardroom with granite conference table",
+      "Custom bathroom vanities",
+      "Elevator lobby feature walls"
+    ],
+    "images": [
+      {
+        "src": "/images/home-slider/1.jpg",
+        "alt": "Reception area",
+        "caption": "Stunning granite reception desk"
+      },
+      {
+        "src": "/images/home-slider/2.jpg",
+        "alt": "Boardroom",
+        "caption": "Executive boardroom"
+      },
+      {
+        "src": "/images/home-slider/3.jpg",
+        "alt": "Elevator lobby",
+        "caption": "Granite feature wall"
+      }
+    ],
+    "testimonial": {
+      "quote": "Professional, efficient, and the results speak for themselves. Our clients are consistently impressed.",
+      "author": "David Chen",
+      "role": "Facilities Director"
+    }
+  },
+  "luxury-hotel-lobby": {
+    "title": "Luxury Hotel Lobby",
+    "category": "Hospitality",
+    "location": "Santa Monica, CA",
+    "year": "2024",
+    "description": "A breathtaking hospitality project featuring stunning onyx feature walls that transform the lobby into an unforgettable first impression.",
+    "heroImage": "/images/home-slider/3.jpg",
+    "heroImageAlt": "Hotel lobby with backlit onyx walls",
+    "client": "Boutique Luxury Hotel",
+    "scope": "Lobby renovation, bar area, and guest bathroom installations",
+    "materials": ["White Onyx", "Honey Onyx", "Travertine", "Italian Marble"],
+    "features": ["Backlit onyx feature walls", "Custom bar top with live edges", "Marble check-in counters", "Designer bathroom installations"],
+    "images": [
+      {
+        "src": "/images/home-slider/1.jpg",
+        "alt": "Onyx feature wall",
+        "caption": "Stunning backlit onyx installation"
+      },
+      {
+        "src": "/images/home-slider/2.jpg",
+        "alt": "Bar area",
+        "caption": "Custom onyx bar top"
+      },
+      {
+        "src": "/images/home-slider/3.jpg",
+        "alt": "Check-in counter",
+        "caption": "Elegant marble reception"
+      }
+    ],
+    "testimonial": {
+      "quote": "The onyx walls have become the signature feature of our hotel. Guests constantly ask about them.",
+      "author": "Maria Rodriguez",
+      "role": "Hotel General Manager"
+    }
+  },
+  "shavar-estate": {
+    "title": "Test Estate",
+    "category": "Home",
+    "location": "Santa Monica, CA",
+    "year": "2024",
+    "description": "A breathtaking hospitality project featuring stunning onyx feature walls that transform the lobby into an unforgettable first impression.",
+    "heroImage": "/images/home-slider/4.jpg",
+    "heroImageAlt": "Hotel lobby with backlit onyx walls",
+    "client": "Boutique Luxury Hotel",
+    "scope": "Lobby renovation, bar area, and guest bathroom installations",
+    "materials": ["White Onyx", "Honey Onyx", "Travertine", "Italian Marble"],
+    "features": ["Backlit onyx feature walls", "Custom bar top with live edges", "Marble check-in counters", "Designer bathroom installations"],
+    "images": [
+      {
+        "src": "/images/home-slider/1.jpg",
+        "alt": "Onyx feature wall",
+        "caption": "Stunning backlit onyx installation"
+      },
+      {
+        "src": "/images/home-slider/2.jpg",
+        "alt": "Bar area",
+        "caption": "Custom onyx bar top"
+      },
+      {
+        "src": "/images/home-slider/3.jpg",
+        "alt": "Check-in counter",
+        "caption": "Elegant marble reception"
+      }
+    ],
+    "testimonial": {
+      "quote": "The onyx walls have become the signature feature of our hotel. Guests constantly ask about them.",
+      "author": "Maria Rodriguez",
+      "role": "Hotel General Manager"
+    }
+  }
+}

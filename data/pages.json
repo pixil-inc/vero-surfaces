@@ -1,14 +1,83 @@
 {
   "home": {
-    "title": "Home Page",
-    "description": "Welcome to the home page",
+    "title": "Vero Surfaces | Premium Stone Solutions",
+    "description": "Discover premium natural stone surfaces for your projects",
     "blocks": [
       {
         "type": "hero",
         "data": {
-          "title": "Welcome to Our Website",
-          "subtitle": "We provide the best services for you",
-          "backgroundImage": "/images/hero-bg.jpg"
+          "slides": [
+            {
+              "preheading": "Timeless Elegance",
+              "title": "Natural Stone Surfaces",
+              "description": "Premium quality for discerning projects",
+              "image": "/images/home-slider/1.jpg",
+              "imageAlt": "Luxury marble surface"
+            },
+            {
+              "title": "Crafted Excellence",
+              "description": "Over 25 years of stone mastery",
+              "image": "/images/home-slider/2.jpg",
+              "imageAlt": "Professional stone installation"
+            },
+            {
+              "title": "Crafted Excellence",
+              "description": "Over 25 years of stone mastery",
+              "image": "/images/home-slider/3.jpg",
+              "imageAlt": "Professional stone installation"
+            }
+          ],
+          "fullHeight": true,
+          "autoScrollInterval": 3000
+        }
+      },
+      {
+        "type": "toggle-list",
+        "data": {
+          "content": {
+            "preheading": "Curation",
+            "heading": "Nature's Finest Palette.",
+            "copy": "Explore our master-selected collection of rare geological specimens, sourced from the world's most prestigious quarries."
+          },
+          "link": {
+            "text": "View Inventory",
+            "url": "#"
+          },
+          "items": [
+            {
+              "id": "marble",
+              "label": "Marble",
+              "image": "/images/home-slider/1.jpg",
+              "imageAlt": "Premium Marble Slab",
+              "subtitle": "Origin: Tuscany, Italy",
+              "title": "Calacatta Borghini"
+            },
+            {
+              "id": "granite",
+              "label": "Granite",
+              "image": "/images/home-slider/2.jpg",
+              "imageAlt": "Premium Granite Slab",
+              "subtitle": "Deep Texture Durability",
+              "title": "Cosmic Black"
+            },
+            {
+              "id": "natural-stone",
+              "label": "Natural Stone",
+              "image": "/images/home-slider/3.jpg",
+              "imageAlt": "Premium Natural Stone Slab",
+              "subtitle": "Translucent Luxury",
+              "title": "Honey Vein Onyx",
+              "description": "Elevate any space with premium natural marble. Transform spaces with the elegance and authenticity that only nature can provide.  Nothing compares to the beauty, elegance, and enduring quality of natural marble."
+            },
+            {
+              "id": "travertine",
+              "label": "Travertine",
+              "image": "/images/home-slider/4.jpg",
+              "imageAlt": "Premium Travertine Slab",
+              "subtitle": "Architectural Heritage",
+              "title": "Silver Travertine"
+            }
+          ]
         }
       },
       {
@@ -18,53 +87,91 @@
           "description": "Take a look at some of our recent work",
           "projects": [
             {
-              "title": "Project One",
-              "description": "Description of project one.",
               "image": "/images/project1.jpg",
-              "link": "/projects/project-one"
+              "alt": "Luxury residential project",
+              "category": "Residential",
+              "name": "Modern Villa Estate",
+              "description": "Premium marble installation featuring Calacatta Gold"
             },
             {
-              "title": "Project Two",
-              "description": "Description of project two.",
               "image": "/images/project2.jpg",
-              "link": "/projects/project-two"
+              "alt": "Commercial office building",
+              "category": "Commercial",
+              "name": "Corporate Headquarters",
+              "description": "Elegant granite surfaces throughout executive floors"
             }
           ]
+        }
+      },
+      {
+        "type": "image-carousel",
+        "data": {
+          "images": [
+            { "src": "/images/logo/brand-1.png", "alt": "Partner Brand 1" },
+            { "src": "/images/logo/brand-2.png", "alt": "Partner Brand 2" },
+            { "src": "/images/logo/brand-3.png", "alt": "Partner Brand 3" },
+            { "src": "/images/logo/brand-4.png", "alt": "Partner Brand 4" },
+            { "src": "/images/logo/brand-5.png", "alt": "Partner Brand 5" },
+            { "src": "/images/logo/brand-6.png", "alt": "Partner Brand 6" }
+          ],
+          "autoScrollInterval": 3000
         }
       }
     ]
   },
-  "about": {
-    "title": "Home Page",
-    "description": "Welcome to the home page",
+  "company": {
+    "title": "About Us | Vero Surfaces",
+    "description": "Learn about our heritage in premium stone solutions",
     "blocks": [
       {
         "type": "hero",
         "data": {
-          "title": "Welcome to Our Website",
-          "subtitle": "We provide the best services for you",
-          "backgroundImage": "/images/hero-bg.jpg"
+          "slides": [
+            {
+              "title": "Our Story",
+              "description": "25 years of stone craftsmanship",
+              "image": "/images/home-slider/1.jpg",
+              "imageAlt": "About Vero Surfaces",
+              "fullHeight": false
+            }
+          ]
         }
       },
       {
-        "type": "featured-projects",
+        "type": "side-by-side",
         "data": {
-          "title": "Our Featured Projects",
-          "description": "Take a look at some of our recent work",
-          "projects": [
+          "title": "Commitment to Excellence",
+          "description": "From sourcing rare marbles in Carrara to precision installation in modern landmarks, our commitment to quality is unwavering.",
+          "image": "/images/about-image.jpg",
+          "imageAlt": "Craftsmen at work",
+          "imagePosition": "right"
+        }
+      }
+    ]
+  },
+  "projects": {
+    "title": "Our Projects | Vero Surfaces",
+    "description": "Explore our portfolio of exceptional stone installations",
+    "blocks": [
+      {
+        "type": "hero",
+        "data": {
+          "slides": [
             {
-              "title": "Project One",
-              "description": "Description of project one.",
-              "image": "/images/project1.jpg",
-              "link": "/projects/project-one"
-            },
-            {
-              "title": "Project Two",
-              "description": "Description of project two.",
-              "image": "/images/project2.jpg",
-              "link": "/projects/project-two"
+              "title": "Our Portfolio",
+              "description": "Showcasing excellence in stone",
+              "image": "/images/projects-hero.jpg",
+              "imageAlt": "Featured projects",
+              "fullHeight": false
             }
           ]
+        }
+      },
+      {
+        "type": "projects-grid",
+        "data": {
+          "title": "Our Work",
+          "description": "Discover our latest installations across residential, commercial, and hospitality projects"
         }
       }
     ]
