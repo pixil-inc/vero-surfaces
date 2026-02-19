@@ -80,7 +80,7 @@ export const Hero: React.FC<HeroBlockData> = ({ slides, autoScrollInterval = 500
   return (
     <section
       data-block-type="hero"
-      className={`${sliderHeight} hero-video-container bg-primary relative flex items-center justify-center overflow-hidden transition-all duration-700`}
+      className={`${sliderHeight} hero-video-container bg-dark relative flex items-center justify-center overflow-hidden transition-all duration-700`}
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
       onTouchStart={handleTouchStart}
@@ -102,7 +102,7 @@ export const Hero: React.FC<HeroBlockData> = ({ slides, autoScrollInterval = 500
           >
             <Image
               alt={slide.imageAlt}
-              className="absolute inset-0 h-full w-full object-cover opacity-70"
+              className="absolute inset-0 h-full w-full object-cover opacity-60"
               src={slide.image}
               fill
               priority={index === 0}
@@ -112,7 +112,7 @@ export const Hero: React.FC<HeroBlockData> = ({ slides, autoScrollInterval = 500
       </div>
 
       {/* Content */}
-      <div key={currentSlide} className="animate-fadeIn relative z-10 px-4 text-center">
+      <div key={currentSlide} className="animate-fadeIn relative z-10 max-w-3xl px-4 text-center">
         {preheading && (
           <>
             <span className="pre-heading text-white">{preheading}</span>
@@ -122,7 +122,7 @@ export const Hero: React.FC<HeroBlockData> = ({ slides, autoScrollInterval = 500
         <h1 className="font-abygaer mb-6 text-5xl font-medium text-white md:text-8xl">{heading}</h1>
         <p className="text-sm font-light tracking-[0.3em] text-white/80 uppercase md:text-base">{copy}</p>
         {links && (
-          <div className="inline-flex gap-6">
+          <div className="mt-8 inline-flex items-center gap-6">
             {links.map((link, index) => (
               <Button key={index} url={link.url} style={link.style}>
                 {link.text}

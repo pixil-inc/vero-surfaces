@@ -128,7 +128,7 @@ export const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, autoScroll
             {extendedImages.map((image, index) => (
               <div
                 key={`${index}`}
-                className="relative flex h-20 flex-shrink-0 items-center justify-center opacity-70 transition-opacity duration-300 hover:opacity-100"
+                className="relative flex h-12 flex-shrink-0 items-center justify-center opacity-70 transition-opacity duration-300 hover:opacity-100"
                 style={{
                   width: `calc((100% - ${(visibleLogos - 1) * (visibleLogos >= 6 ? 3 : 2)}rem) / ${visibleLogos})`,
                 }}

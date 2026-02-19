@@ -2,14 +2,18 @@
   <defs>
     <style>
       .cls-1 {
-        fill: #fff;
+        fill: #010101;
       }
 
       .cls-2 {
-        fill: #078c45;
+        fill: #fff;
       }
 
       .cls-3 {
+        fill: #078c45;
+      }
+
+      .cls-4 {
         fill: #ce202b;
       }
     </style>
@@ -19,9 +23,9 @@
   </g>
   <g id="Layer_3">
     <g>
-      <path class="cls-2" d="M44.86,33.19h295.33v50.11H45.37c-13.98,0-25.31-11.33-25.31-25.31h0c0-13.69,11.1-24.8,24.8-24.8Z"></path>
-      <rect class="cls-1" x="340.18" y="33.19" width="320.12" height="50.11"></rect>
-      <path class="cls-3" d="M660.31,33.19h295.33c13.69,0,24.8,11.1,24.8,24.8v.51c0,13.69-11.1,24.8-24.8,24.8h-295.33v-50.11Z"></path>
+      <path class="cls-3" d="M44.86,33.19h295.33v50.11H45.37c-13.98,0-25.31-11.33-25.31-25.31h0c0-13.69,11.1-24.8,24.8-24.8Z"></path>
+      <rect class="cls-2" x="340.18" y="33.19" width="320.12" height="50.11"></rect>
+      <path class="cls-4" d="M660.31,33.19h295.33c13.69,0,24.8,11.1,24.8,24.8v.51c0,13.69-11.1,24.8-24.8,24.8h-295.33v-50.11Z"></path>
     </g>
   </g>
 </svg></svg><style>@media (prefers-color-scheme: light) { :root { filter: none; } }

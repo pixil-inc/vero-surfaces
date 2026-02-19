@@ -49,7 +49,7 @@ export const Header: React.FC<HeaderProps> = ({ links }) => {
   return (
     <header
       className={`text-primary-alt fixed top-0 left-0 z-50 w-screen py-2 transition-all duration-300 ${
-        !isHeroVisible ? "bg-translucent shadow-sm backdrop-blur-sm" : ""
+        !isHeroVisible ? "bg-translucent shadow-sm saturate-100 backdrop-blur-sm" : ""
       }`}
     >
       <div className="mx-auto max-w-7xl px-6">

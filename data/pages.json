@@ -53,9 +53,9 @@
         "type": "toggle-list",
         "data": {
           "content": {
-            "preheading": "Curation",
-            "heading": "Nature's Finest Palette.",
-            "copy": "Explore our master-selected collection of rare geological specimens, sourced from the world's most prestigious quarries."
+            "preheading": "Surfaces",
+            "heading": "Lorem impsum",
+            "copy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
           },
           "link": {
             "text": "View Inventory",
@@ -67,33 +67,48 @@
               "label": "Marble",
               "image": "/images/home-slider/1.jpg",
               "imageAlt": "Premium Marble Slab",
-              "subtitle": "Origin: Tuscany, Italy",
-              "title": "Calacatta Borghini"
+              "subtitle": "Marble",
+              "title": "Calacatta Borghini",
+              "description": "Elevate any space with premium natural marble. Transform spaces with the elegance and authenticity that only nature can provide.  Nothing compares to the beauty, elegance, and enduring quality of natural marble.",
+              "links": [
+                {
+                  "text": "Learn more",
+                  "url": "#",
+                  "style": "tertiary"
+                }
+              ]
             },
             {
               "id": "granite",
               "label": "Granite",
               "image": "/images/home-slider/2.jpg",
               "imageAlt": "Premium Granite Slab",
-              "subtitle": "Deep Texture Durability",
-              "title": "Cosmic Black"
+              "subtitle": "Granite",
+              "title": "Cosmic Black",
+              "description": "Elevate any space with premium natural granite. Transform spaces with the elegance and authenticity that only nature can provide.  Nothing compares to the beauty, elegance, and enduring quality of natural granite.",
+              "links": [
+                {
+                  "text": "Learn more",
+                  "url": "#",
+                  "style": "tertiary"
+                }
+              ]
             },
             {
-              "id": "natural-stone",
-              "label": "Natural Stone",
+              "id": "quartz",
+              "label": "Quartz",
               "image": "/images/home-slider/3.jpg",
-              "imageAlt": "Premium Natural Stone Slab",
-              "subtitle": "Translucent Luxury",
-              "title": "Honey Vein Onyx",
-              "description": "Elevate any space with premium natural marble. Transform spaces with the elegance and authenticity that only nature can provide.  Nothing compares to the beauty, elegance, and enduring quality of natural marble."
-            },
-            {
-              "id": "travertine",
-              "label": "Travertine",
-              "image": "/images/home-slider/4.jpg",
-              "imageAlt": "Premium Travertine Slab",
-              "subtitle": "Architectural Heritage",
-              "title": "Silver Travertine"
+              "imageAlt": "Premium Quartz Slab",
+              "subtitle": "Quartz",
+              "title": "Quartz Elegance",
+              "description": "Elevate any space with premium natural quartz. Transform spaces with the elegance and authenticity that only nature can provide.  Nothing compares to the beauty, elegance, and enduring quality of natural quartz.",
+              "links": [
+                {
+                  "text": "Learn more",
+                  "url": "#",
+                  "style": "tertiary"
+                }
+              ]
             }
           ]
         }
@@ -103,9 +118,16 @@
         "data": {
           "content": {
             "preheading": "Featured Projects",
-            "heading": "Proud Work",
-            "copy": "Take a look at some of our recent work"
+            "heading": "Some of our recent work",
+            "copy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
           },
+          "links": [
+            {
+              "text": "View All Projects",
+              "url": "#",
+              "style": "primary"
+            }
+          ],
           "projects": [
             {
               "image": "/images/home-slider/1.jpg",
@@ -117,9 +139,18 @@
                 {
                   "text": "View Project",
                   "url": "#"
-                },
+                }
+              ]
+            },
+            {
+              "image": "/images/home-slider/2.jpg",
+              "alt": "Commercial office building",
+              "category": "Commercial",
+              "name": "Corporate Headquarters",
+              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+              "links": [
                 {
-                  "text": "View Project 2",
+                  "text": "View Project",
                   "url": "#"
                 }
               ]
@@ -129,7 +160,26 @@
               "alt": "Commercial office building",
               "category": "Commercial",
               "name": "Corporate Headquarters",
-              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+              "links": [
+                {
+                  "text": "View Project",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "image": "/images/home-slider/2.jpg",
+              "alt": "Commercial office building",
+              "category": "Commercial",
+              "name": "Corporate Headquarters",
+              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+              "links": [
+                {
+                  "text": "View Project",
+                  "url": "#"
+                }
+              ]
             }
           ]
         }
@@ -182,7 +232,7 @@
                 "heading": "Our Portfolio",
                 "copy": "Showcasing excellence in stone"
               },
-              "image": "/images/projects-hero.jpg",
+              "image": "/images/home-slider/1.jpg",
               "imageAlt": "Featured projects",
               "fullHeight": false
             }

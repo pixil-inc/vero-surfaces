@@ -81,6 +81,7 @@ export interface ToggleListBlockData {
     title: string;
     subtitle: string;
     description: string;
+    links: LinkData[];
   }>;
 }
 

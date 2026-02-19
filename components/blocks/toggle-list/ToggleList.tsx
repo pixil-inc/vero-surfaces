@@ -11,7 +11,7 @@ export const ToggleList: React.FC<ToggleListBlockData> = ({ content, link, items
   const [selectedItem, setSelectedItem] = useState<string>(items[0]?.id || "");
 
   return (
-    <section className="dark:bg-background-dark bg-white py-32">
+    <section data-test-id="toggle-list" className="dark:bg-background-dark bg-white py-32">
       <div className="mx-auto max-w-7xl px-6">
         <div className="flex min-h-[700px] flex-col items-stretch overflow-hidden lg:flex-row dark:border-gray-900">
           <div className="flex w-full flex-col justify-between border-r border-gray-100 bg-white p-12 md:p-16 lg:w-2/5 dark:border-gray-900 dark:bg-neutral-950">
@@ -19,7 +19,7 @@ export const ToggleList: React.FC<ToggleListBlockData> = ({ content, link, items
               <div className="space-y-4">
                 <span className="pre-heading">{preheading}</span>
                 <h2 className="heading">{heading}</h2>
-                <p className="mb-12 text-sm leading-relaxed font-light text-gray-500 dark:text-gray-400">{copy}</p>
+                <p className="text-secondary mb-12">{copy}</p>
               </div>
               <div className="space-y-4">
                 {items.map((item) => (
@@ -51,12 +51,20 @@ export const ToggleList: React.FC<ToggleListBlockData> = ({ content, link, items
                 className={`absolute inset-0 transition-opacity duration-700 ${selectedItem === item.id ? "z-10 opacity-100" : "z-0 opacity-0"}`}
               >
                 <Image alt={item.imageAlt} className="object-cover" src={item.image} fill sizes="65vw" />
-                <div className="absolute bottom-0 left-0 z-20 w-full px-12 text-white">
-                  <p className="mb-1 text-[9px] tracking-widest uppercase opacity-70">{item.subtitle}</p>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                <div className="absolute bottom-8 left-0 z-20 w-full px-12 text-white">
+                  <p className="mb-1 text-xs tracking-widest uppercase opacity-70">{item.subtitle}</p>
                   <h3 className="font-display text-xl tracking-wide">{item.title}</h3>
-                  <p className="mb-12 text-sm leading-relaxed font-light">{item.description}</p>
+                  <p className="mb-4 text-sm leading-relaxed font-light">{item.description}</p>
+                  <div className="flex gap-8">
+                    {item.links &&
+                      item.links.map((link, linkIndex) => (
+                        <Button key={linkIndex} url={link.url} style="tertiary">
+                          {link.text}
+                        </Button>
+                      ))}
+                  </div>
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
               </div>
             ))}
           </div>

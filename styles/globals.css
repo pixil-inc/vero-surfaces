@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 :root {
+  --dark: #0a0a0a;
   --background: #ffffff;
   --foreground: #171717;
   --primary: #1a1a1a;
@@ -16,6 +17,7 @@
 }
 
 @theme {
+  --color-dark: var(--dark);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-made-tommy);
@@ -46,6 +48,11 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-made-tommy), sans-serif;
+}
+
+p {
+  line-height: 1.6;
+  font-size: 0.975rem;
 }
 
 .hero-video-container {
@@ -129,7 +136,7 @@ body {
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: var(--vero-red);
+  color: inherit;
 }
 
 .heading {
